@@ -33,9 +33,9 @@ export const fetchUserDetails = async (provider, accessToken) => {
 
 export const exchangeCodeForAccessToken = async (code) => {
   try {
-    const response = await axios.post(`${import.meta.env.VITE_GITHUB_OAUTH}`, {
-      client_id: '5a03979623deaed9eddf',
-      client_secret: '62553222235a31fe0a68a89023a4844bb1b46aa2',
+    const response = await axios.post(import.meta.env.VITE_GITHUB_OAUTH, {
+      client_id: import.meta.env.VITE_GITHUB_CLIENT_ID,
+      client_secret: import.meta.env.VITE_GITHUB_CLIENT_SECRET,
       code: code,
       redirect_uri: import.meta.env.VITE_GITHUB_REDIRECT_URI
     });
