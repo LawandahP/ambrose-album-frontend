@@ -44,7 +44,7 @@ const AlbumPage = () => {
         <Spinner />
       ) : (
         <>
-          {album && <h1>{album.title} Album Photos</h1>}
+          {album && <h2>{album.title} Album Photos</h2>}
           <Grid container spacing={4}>
               {photos.map(photo => (
                   <Grid 

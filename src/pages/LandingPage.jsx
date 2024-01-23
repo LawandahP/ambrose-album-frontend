@@ -28,7 +28,7 @@ function Copyright() {
 
 
 export default function LandingPage() {
-  const { userDetails, logout } = React.useContext(UserContext);
+  const { userDetails } = React.useContext(UserContext);
 
   return (
       <>

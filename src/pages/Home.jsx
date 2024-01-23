@@ -27,8 +27,8 @@ const HomePage = () => {
   const { userDetails } = React.useContext(UserContext);
 
   const columns = [
-    { id: 1, label: 'User', minWidth: 170 },
-    { id: 2, label: 'Albums', minWidth: 100 },
+    { id: 1, label: 'User', maxWidth: 170 },
+    { id: 2, label: 'Albums', maxWidth: 100, align: 'right'},
   ];
 
   useEffect(() => {
@@ -60,9 +60,9 @@ const HomePage = () => {
         <Spinner />
       ) : (
         <>
-          <h1>Welcome, {userDetails?.name}</h1>
+          <h2>Welcome, {userDetails?.name}</h2>
           <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <Table aria-label="simple table">
             <TableHead>
               <TableRow>
                 {columns.map((column) => (
@@ -89,7 +89,7 @@ const HomePage = () => {
                      {user?.name}
                     </Typography>
                   </TableCell>
-                  <TableCell align="left">{user?.albumCount}</TableCell>
+                  <TableCell align="right">{user?.albumCount}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

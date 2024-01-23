@@ -5,6 +5,7 @@ import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import Divider from '@mui/material/Divider';
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
@@ -49,15 +50,22 @@ const UserPage = () => {
           {user && <h2>{user.name} Albums</h2>}
           
           <List
-            sx={{ width: '100%', bgcolor: 'background.paper' }}
+            sx={{ 
+              width: '100%', bgcolor: 'background.paper', 
+              boxShadow: 'rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;',
+              borderRadius: '5px'
+            }}
           >
             {albums.map((album, index) => (
+              <>
               <ListItemButton key={album.id} onClick={() => navigate(`/album/${album.id}`)}>
                 <ListItemIcon>
                   {index + 1}
                 </ListItemIcon>
                 <ListItemText id={`list-item-${album?.id}`} primary={album?.title} />
               </ListItemButton>
+              <Divider />
+              </>
             ))}
         </List>
       </>   
