@@ -70,14 +70,16 @@ const PhotoDetails = () => {
           {photo && (
             <>
               <Photo imgUrl={photo?.url} title={photo?.title} />
-              <div style={{marginTop: "15px", display: "flex", alignItems: 'center', gap: '15px'}}>
-                <TextField fullWidth type="text" value={title} variant="outlined" onChange={handleTitleChange} />
+              <div style={{marginTop: "25px", display: "flex", alignItems: 'center', gap: '15px'}}>
+                <TextField size="small" fullWidth label="Photo Title" type="text" value={title} variant="outlined" onChange={handleTitleChange} />
                 {
                   loadingUpdate 
                   ? <CircularProgress />:
                   <Button 
                     variant='contained'
-                    onClick={handleSubmit}>Update Title
+                    onClick={handleSubmit}
+                  >
+                    Update
                   </Button> 
                 }
               </div>
