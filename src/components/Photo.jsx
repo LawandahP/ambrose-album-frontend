@@ -11,7 +11,12 @@ import Button from "@mui/material/Button";
 
 const PhotoCard = ({imgUrl, title, onClick}) => {
   return (
-    <Card onClick={onClick} sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+    <Card 
+      onClick={onClick} 
+      sx={{ 
+        height: "100%", display: "flex", flexDirection: "column",
+        ":hover": { color: 'gray', transform: 'scale(1.005)', transition: 'transform 0.3s ease'}
+        }}>
       <CardMedia
         component="div"
         sx={{

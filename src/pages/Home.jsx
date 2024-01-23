@@ -83,8 +83,10 @@ const HomePage = () => {
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <TableCell component="th" scope="row">
-                    <Typography sx={{ cursor: 'pointer'}} onClick={() => navigate(`/user/${user.id}`)}>
-                      {user?.name}
+                    <Typography 
+                      sx={{ cursor: 'pointer', color: 'gray', ":hover": { color: 'blue'}}}
+                      onClick={() => navigate(`/user/${user.id}`)}>
+                     {user?.name}
                     </Typography>
                   </TableCell>
                   <TableCell align="left">{user?.albumCount}</TableCell>
