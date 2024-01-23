@@ -2,7 +2,8 @@
 import { useEffect, useContext } from 'react';
 import { UserContext } from '../hooks/useAuth';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import Layout from './Layout';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
 import Spinner from './Spinner';
 
 
@@ -29,9 +30,12 @@ const AuthRedirectHandler = ({ provider }) => {
   }, [authenticate, exchangeCodeForToken, provider, searchParams, navigate, userDetails]);
 
   return (
-    <Layout>
-      <Spinner text={'Authenticating...'} />
-    </Layout>
+    <>
+      <CssBaseline />
+      <Container sx={{ py: 8 }} maxWidth="md"> 
+        <Spinner text={'Authenticating...'} />
+      </Container>
+    </>
   );
 };
 
