@@ -19,7 +19,8 @@ const Login = () => {
   
   return (
     <div className='login-button-container'>
-      <LoginButton 
+      {/* Add more buttons for other providers */}
+      {/* <LoginButton 
         text={'Continue with Google'}
         icon={<FcGoogle size={24} />}
         onClick={() => handleLogin(googleConfig)
@@ -29,7 +30,7 @@ const Login = () => {
         text={'Continue with Facebook'}
         icon={<FaFacebook size={24} />}
         onClick={() => handleLogin(facebookConfig)
-      }/>   
+      }/>    */}
 
       <LoginButton 
         text={'Continue with Github'}
@@ -37,8 +38,6 @@ const Login = () => {
         onClick={() => handleLogin(githubConfig)
       }/> 
         
-    
-      {/* Add more buttons for other providers */}
     </div>
   );
 };

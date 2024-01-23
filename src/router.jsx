@@ -1,19 +1,14 @@
 /* eslint-disable no-unused-vars */
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import AuthRedirectHandler from './components/AuthRedirectHandler';
-// import Dashboard from './pages/Dashboard/'; // Your protected component
-
 import HomePage from './pages/Home';
 import UserPage from './pages/User';
 import PhotoDetails from './pages/Photo';
 import AlbumPage from './pages/Album';
 
 const Routing = () => {
-  // const { user } = useAuth();
-
   return (
     <Router>
       <Routes>

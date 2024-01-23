@@ -49,14 +49,13 @@ function Header({handleOpen}) {
   // const navigate = useNavigate();
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
             sx={{
               ml: 2,
               mr: 4,

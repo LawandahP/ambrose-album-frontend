@@ -15,7 +15,6 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 
 
-
 const PhotoDetails = () => {
   const [photo, setPhoto] = useState(null);
   const [title, setTitle] = useState('');
