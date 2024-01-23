@@ -16,7 +16,7 @@ export const googleConfig = {
   
   export const githubConfig = {
     clientId: "5a03979623deaed9eddf",
-    redirectUri: "http://localhost:5173/auth/github",
+    redirectUri: import.meta.env.VITE_GITHUB_REDIRECT_URI,
     authorizationUrl: "https://github.com/login/oauth/authorize",
     scope: "user",
     // ... other configurations
